@@ -1,6 +1,8 @@
 package com.redjanvier.signature.services;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,7 @@ import java.security.Principal;
 import java.util.List;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class UserService {
 
@@ -41,30 +44,47 @@ public class UserService {
         repository.save(user);
     }
 
-    public RegisterResponse changePosition(String request, Integer id) {
+    public RegisterResponse changePosition(UserDto request, Integer id) {
         User user = repository.findById(id).orElseThrow();
-        user.setPosition(request);
+        user.setPosition(request.getPosition());
         repository.save(user);
         repository.flush();
 
         return RegisterResponse.builder()
             .success(true)
             .message("Position successfully updated!")
-            .data(user)
+            .data(UserDto.builder()
+                .id(user.getId())
+                .firstname(user.getFirstname())
+                .lastname(user.getLastname())
+                .email(user.getEmail())
+                .position(user.getPosition())
+                .phone(user.getPhone())
+                .enabled(user.getEnabled())
+                .build()
+            )
             .build();
     }
 
-    public RegisterResponse changePhone(String request, Integer id) {
+    public RegisterResponse changePhone(UserDto request, Integer id) {
         User user = repository.findById(id).orElseThrow(() -> new RuntimeException("User is not found."));
-        user.setPhone(request);
+        user.setPhone(request.getPhone());
         repository.save(user);
         repository.flush();
 
         return RegisterResponse.builder()
             .success(true)
             .message("Phone successfully updated!")
-            .data(user)
-            .build();
+            .data(UserDto.builder()
+                .id(user.getId())
+                .firstname(user.getFirstname())
+                .lastname(user.getLastname())
+                .email(user.getEmail())
+                .position(user.getPosition())
+                .phone(user.getPhone())
+                .enabled(user.getEnabled())
+                .build()
+            ).build();
     }
 
     public RegisterResponse listAll() {

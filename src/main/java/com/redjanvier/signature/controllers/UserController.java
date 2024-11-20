@@ -6,12 +6,14 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.redjanvier.signature.dtos.ChangePasswordRequest;
 import com.redjanvier.signature.dtos.RegisterResponse;
+import com.redjanvier.signature.dtos.UserDto;
 import com.redjanvier.signature.models.User;
 import com.redjanvier.signature.services.UserService;
 
@@ -36,7 +38,7 @@ public class UserController {
 
     @PatchMapping("phone")
     public ResponseEntity<RegisterResponse> postMethodName(
-        @RequestBody String phone,
+        @RequestBody UserDto phone,
         Principal connectedUser
     ) {
         var user = (User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal();
@@ -54,12 +56,12 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @PatchMapping("position/{id}")
+    @PutMapping("position/{id}")
     @PreAuthorize("hasAuthority('admin:update')")
     public ResponseEntity<RegisterResponse> changePosition(
-          @RequestBody String newPosition,
+          @RequestBody UserDto request,
           @PathVariable(name = "id") Integer userId
     ) {
-        return ResponseEntity.ok(service.changePosition(newPosition, userId));
+        return ResponseEntity.ok(service.changePosition(request, userId));
     }
 }

@@ -43,6 +43,8 @@ public class GlobalExceptionHandler {
         if (errorMessage != null && errorMessage.contains(":")) {
             errorMessage = errorMessage.split(":")[1].trim();
         }
+        if (errorMessage.equalsIgnoreCase("User is disable"))
+            errorMessage = "User not yet verified!";
         errorResponse.put("error", errorMessage);
         log.error("INTERNAL SERVER ERROR: {}", ex);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);

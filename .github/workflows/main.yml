@@ -1,0 +1,116 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      DB_URL: jdbc:postgresql://localhost:5432/ist_signature
+      DB_USERNAME: redjanvier
+      DB_PASSWORD: Jannyda1
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      SUPPORT_EMAIL: ${{ secrets.SUPPORT_EMAIL }}
+      APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+
+    services:
+      postgres:
+        image: postgis/postgis:10-2.5
+        env:
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: signaturegenerator
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '17'
+
+    - name: Wait for PostgreSQL to be ready
+      run: |
+        until pg_isready -h localhost -p 5432 -U postgres; do
+          echo "Waiting for PostgreSQL to be ready..."
+          sleep 2
+        done
+
+    - name: Create custom user and database
+      run: |
+        PGPASSWORD=password psql -h localhost -U postgres -d signaturegenerator -c "CREATE USER redjanvier WITH PASSWORD 'Jannyda1';"
+        PGPASSWORD=password psql -h localhost -U postgres -d signaturegenerator -c "GRANT ALL PRIVILEGES ON DATABASE signaturegenerator TO redjanvier;"
+
+    - name: Build with Maven
+      run: mvn clean package
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: packaged-application
+        path: |
+          target/*.jar
+          Dockerfile    
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: packaged-application
+        path: deployment/
+
+    - name: Create .env file
+      run: |
+        cat <<EOF > deployment/.env
+        DB_URL=${{ secrets.DB_URL }}
+        DB_USERNAME=${{ secrets.DB_USERNAME }}
+        DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+        JWT_SECRET=${{ secrets.JWT_SECRET }}
+        SUPPORT_EMAIL=${{ secrets.SUPPORT_EMAIL }}
+        APP_PASSWORD=${{ secrets.APP_PASSWORD }}
+        EOF
+
+    - name: Setup key
+      id: setup-key
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        echo "$DEPLOY_KEY" >> $HOME/key.pem
+        chmod 400 $HOME/key.pem
+
+    - name: Copy artifacts to EC2
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ubuntu
+        key: ${{ secrets.DEPLOY_KEY }}
+        source: "deployment/*"
+        target: "/home/ubuntu/deployment/"
+        
+
+    - name: SSH into EC2 and deploy the Docker container
+      run: |
+        ssh -o StrictHostKeyChecking=no -i $HOME/key.pem ubuntu@${{ secrets.DEPLOY_HOST }} << 'EOF'
+         
+          sudo apt-get update -y
+          sudo apt-get install docker.io -y
+
+          sudo docker build -t email-signature-generator /home/ubuntu/deployment/deployment
+
+          sudo docker ps -q -f name=email-signature-generator | xargs -r sudo docker stop
+          sudo docker ps -a -q -f name=email-signature-generator | xargs -r sudo docker rm
+
+          sudo docker run -d --name email-signature-generator --network signaturegenerator-network --env-file /home/ubuntu/deployment/deployment/.env -p 8080:8080 email-signature-generator
+
+          sudo systemctl restart nginx
+        EOF
