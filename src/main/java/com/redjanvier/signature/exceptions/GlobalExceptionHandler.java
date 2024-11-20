@@ -8,18 +8,20 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import jakarta.mail.MessagingException;
+import jakarta.mail.SendFailedException;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(MessagingException.class)
-    public ResponseEntity<Map<String, String>> handleMailSendExceptions(MessagingException ex) {
+    @ExceptionHandler({MessagingException.class, SendFailedException.class})
+    public ResponseEntity<Map<String, String>> handleMailSendExceptions(Exception ex) {
         Map<String, String> errors = new HashMap<>();
-        String message = ex.getMessage();
-        errors.put("error", message);
+        errors.put("error", "Unable to send the email for now!");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
     }
 
@@ -42,6 +44,7 @@ public class GlobalExceptionHandler {
             errorMessage = errorMessage.split(":")[1].trim();
         }
         errorResponse.put("error", errorMessage);
+        log.error("INTERNAL SERVER ERROR: {}", ex);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
 

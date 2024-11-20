@@ -1,13 +1,16 @@
-package com.redjanvier.signature.mock;
+package com.redjanvier.signature.config;
+
+import static org.mockito.Mockito.mock;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 
 @Configuration
-public class TestMailConfig {
+public class EmailTestConfig {
+
     @Bean
     public JavaMailSender javaMailSender() {
-        return new NoOpMailSender();
+        return mock(JavaMailSender.class); // Mock JavaMailSender for tests
     }
 }

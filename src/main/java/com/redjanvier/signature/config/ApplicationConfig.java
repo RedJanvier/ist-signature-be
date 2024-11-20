@@ -25,7 +25,7 @@ public class ApplicationConfig {
   @Bean
   public UserDetailsService userDetailsService() {
     return username -> repository.findByEmail(username)
-        .orElseThrow(() -> new RuntimeException("User not found!"));
+        .orElseThrow(() -> new RuntimeException("Invalid credentials!"));
   }
 
   @Bean

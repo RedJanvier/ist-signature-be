@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping()
     @PreAuthorize("hasAuthority('admin:read')")
-    public ResponseEntity<RegisterResponse> getAll(@RequestParam String param) {
+    public ResponseEntity<RegisterResponse> getAll() {
         return ResponseEntity.ok(service.listAll());
     }
 

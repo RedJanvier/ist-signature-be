@@ -19,4 +19,5 @@ public class UserDto {
   private String phone;
   private Role role;
   private String position;
+  private Boolean enabled;
 }

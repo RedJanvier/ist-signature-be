@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.redjanvier.signature.dtos.ChangePasswordRequest;
 import com.redjanvier.signature.dtos.RegisterResponse;
+import com.redjanvier.signature.dtos.UserDto;
 import com.redjanvier.signature.models.User;
 import com.redjanvier.signature.repositories.UserRepository;
 
@@ -67,7 +68,17 @@ public class UserService {
     }
 
     public RegisterResponse listAll() {
-        List<User> users = repository.findAll();
+        List<UserDto> users = repository.findAll().stream().map(user -> 
+            UserDto.builder()
+                .id(user.getId())
+                .firstname(user.getFirstname())
+                .lastname(user.getLastname())
+                .email(user.getEmail())
+                .position(user.getPosition())
+                .phone(user.getPhone())
+                .enabled(user.getEnabled())
+                .build()
+            ).toList();
 
         return RegisterResponse.builder()
             .success(true)
