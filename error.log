@@ -1,0 +1,981 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.redjanvier:security >-----------------------
+[INFO] Building security 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ security ---
+[INFO] Deleting /Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:3.1.4:run (default-cli) > test-compile @ security >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ security ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ security ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 33 source files with javac [debug release 17] to target/classes
+[WARNING] /Users/redjanvier/Desktop/workspace/personal/ist-signature-be/src/main/java/com/redjanvier/signature/models/Token.java:[39,20] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ security ---
+[INFO] Copying 2 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ security ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:3.1.4:run (default-cli) < test-compile @ security <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.1.4:run (default-cli) @ security ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:40:50.392+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:40:50.394+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:40:50.416+02:00  INFO 87778 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-20T07:40:50.416+02:00  INFO 87778 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-20T07:40:50.796+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:40:50.823+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:40:51.133+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:40:51.139+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:40:51.139+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:40:51.172+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:40:51.173+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 756 ms
+2024-11-20T07:40:51.244+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:40:51.272+02:00  INFO 87778 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2024-11-20T07:40:51.273+02:00  INFO 87778 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-11-20T07:40:51.332+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:40:51.389+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:40:51.400+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-20T07:40:51.509+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@53e99d5c
+2024-11-20T07:40:51.510+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-20T07:40:51.651+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:40:52.028+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:40:52.038+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.038+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:40:52.039+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.039+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:40:52.040+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.040+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:40:52.041+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.041+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:40:52.042+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.042+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:40:52.043+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.043+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:40:52.044+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:40:52.044+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:40:52.080+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:40:52.241+02:00  INFO 87778 --- [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-20T07:40:52.568+02:00  WARN 87778 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-20T07:40:52.739+02:00  INFO 87778 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@186ee6ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@487c6e6, org.springframework.security.web.context.SecurityContextHolderFilter@c61f7fa, org.springframework.security.web.header.HeaderWriterFilter@37fa34f2, org.springframework.web.filter.CorsFilter@147bb6ea, org.springframework.security.web.authentication.logout.LogoutFilter@5a1b1d1d, com.redjanvier.signature.config.JwtAuthenticationFilter@4f4b7b88, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cc984ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@250470cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@704c9a67, org.springframework.security.web.session.SessionManagementFilter@3e135dee, org.springframework.security.web.access.ExceptionTranslationFilter@7e6a44b3, org.springframework.security.web.access.intercept.AuthorizationFilter@27877e47]
+2024-11-20T07:40:52.885+02:00  INFO 87778 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-20T07:40:52.902+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-11-20T07:40:52.909+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Started SecurityApplication in 2.697 seconds (process running for 2.891)
+2024-11-20T07:42:08.974+02:00  INFO 87778 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-20T07:42:08.975+02:00  INFO 87778 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-20T07:42:08.991+02:00  INFO 87778 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+DEBUG: Jakarta Mail version 2.1.1
+DEBUG: URL jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: /META-INF/javamail.default.providers
+DEBUG: Tables of loaded providers
+DEBUG: Providers Listed By Class Name: {com.sun.mail.smtp.SMTPTransport=jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle], com.sun.mail.pop3.POP3Store=jakarta.mail.Provider[STORE,pop3,com.sun.mail.pop3.POP3Store,Oracle], com.sun.mail.imap.IMAPSSLStore=jakarta.mail.Provider[STORE,imaps,com.sun.mail.imap.IMAPSSLStore,Oracle], com.sun.mail.smtp.SMTPSSLTransport=jakarta.mail.Provider[TRANSPORT,smtps,com.sun.mail.smtp.SMTPSSLTransport,Oracle], com.sun.mail.pop3.POP3SSLStore=jakarta.mail.Provider[STORE,pop3s,com.sun.mail.pop3.POP3SSLStore,Oracle], com.sun.mail.imap.IMAPStore=jakarta.mail.Provider[STORE,imap,com.sun.mail.imap.IMAPStore,Oracle]}
+DEBUG: Providers Listed By Protocol: {imap=jakarta.mail.Provider[STORE,imap,com.sun.mail.imap.IMAPStore,Oracle], smtp=jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle], pop3=jakarta.mail.Provider[STORE,pop3,com.sun.mail.pop3.POP3Store,Oracle], imaps=jakarta.mail.Provider[STORE,imaps,com.sun.mail.imap.IMAPSSLStore,Oracle], smtps=jakarta.mail.Provider[TRANSPORT,smtps,com.sun.mail.smtp.SMTPSSLTransport,Oracle], pop3s=jakarta.mail.Provider[STORE,pop3s,com.sun.mail.pop3.POP3SSLStore,Oracle]}
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: URL jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.address.map
+DEBUG: successfully loaded resource: jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.address.map
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "smtp.gmail.com", port 587, isSSL false
+220 smtp.gmail.com ESMTP a640c23a62f3a-aa20df26acasm739423366b.21 - gsmtp
+DEBUG SMTP: connected to host "smtp.gmail.com", port: 587
+EHLO localhost
+250-smtp.gmail.com at your service, [196.12.150.55]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+DEBUG SMTP: Found extension "SIZE", arg "35882577"
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "CHUNKING", arg ""
+DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+STARTTLS
+220 2.0.0 Ready to start TLS
+EHLO localhost
+250-smtp.gmail.com at your service, [196.12.150.55]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+DEBUG SMTP: Found extension "SIZE", arg "35882577"
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "CHUNKING", arg ""
+DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+DEBUG SMTP: protocolConnect login, host=smtp.gmail.com, user=janvierntwali@gmail.com, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<redjanvier@localhost>
+250 2.1.0 OK a640c23a62f3a-aa20df26acasm739423366b.21 - gsmtp
+RCPT TO:<janvierntwali@gmail.com>
+250 2.1.5 OK a640c23a62f3a-aa20df26acasm739423366b.21 - gsmtp
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   janvierntwali@gmail.com
+DATA
+354 Go ahead a640c23a62f3a-aa20df26acasm739423366b.21 - gsmtp
+Date: Wed, 20 Nov 2024 07:42:11 +0200 (CAT)
+To: janvierntwali@gmail.com
+Message-ID: <1666816942.2.1732081331046@localhost>
+Subject: IST Signatures - Verify your account
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_415854661.1732081329222"
+
+------=_Part_0_415854661.1732081329222
+Content-Type: multipart/related; 
+	boundary="----=_Part_1_1774798628.1732081329225"
+
+------=_Part_1_1774798628.1732081329225
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<h2>Hey, Adrien</h2>
+<p>Congratulations for your successfull registration to IST Signatures Platform.</p>
+<p>As a step of your registration you need to verify your account now!</p>
+<a href='http://localhost:8080/api/v1/auth/verify?key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW52aWVybnR3YWxpQGdtYWlsLmNvbSIsImlhdCI6MTczMjA4MTMyOSwiZXhwIjoxNzMyMTY3NzI5fQ.QdFWqexG177TrJUIcmaeMHUXYcHHQTZ4byf2ppP6Hdg' target='__blank'>Click this link to verify</a>
+
+------=_Part_1_1774798628.1732081329225--
+
+------=_Part_0_415854661.1732081329222--
+.
+250 2.0.0 OK  1732081332 a640c23a62f3a-aa20df26acasm739423366b.21 - gsmtp
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 closing connection a640c23a62f3a-aa20df26acasm739423366b.21 - gsmtp
+2024-11-20T07:42:26.053+02:00  WARN 87778 --- [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2024-11-20T07:46:16.562+02:00  INFO 87778 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-20T07:46:16.581+02:00  INFO 87778 --- [       Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:46:16.583+02:00  INFO 87778 --- [       Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-20T07:46:16.586+02:00  WARN 87778 --- [       Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+2024-11-20T07:46:16.593+02:00  INFO 87778 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:46:16.638+02:00  INFO 87778 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-20T07:46:16.646+02:00  INFO 87778 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:46:16.746+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:46:16.746+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:46:16.853+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:46:16.860+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:46:16.943+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:46:16.944+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:46:16.944+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:46:16.948+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:46:16.949+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 201 ms
+2024-11-20T07:46:16.985+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:46:16.988+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:46:16.988+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:46:16.988+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-20T07:46:17.016+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@599cafd5
+2024-11-20T07:46:17.016+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-20T07:46:17.035+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:46:17.067+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:46:17.070+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.070+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:46:17.072+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.072+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:46:17.073+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.073+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:46:17.074+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.074+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:46:17.075+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.075+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:46:17.075+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.075+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:46:17.076+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:46:17.076+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:46:17.109+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:46:17.272+02:00  WARN 87778 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-20T07:46:17.379+02:00  INFO 87778 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c6bf196, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c6d2dd, org.springframework.security.web.context.SecurityContextHolderFilter@5473989d, org.springframework.security.web.header.HeaderWriterFilter@2633a73e, org.springframework.web.filter.CorsFilter@a82ba72, org.springframework.security.web.authentication.logout.LogoutFilter@4bf011ed, com.redjanvier.signature.config.JwtAuthenticationFilter@73dd1b99, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c9d577, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ef898a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@729ae474, org.springframework.security.web.session.SessionManagementFilter@fd6439a, org.springframework.security.web.access.ExceptionTranslationFilter@1a096c48, org.springframework.security.web.access.intercept.AuthorizationFilter@75ff7e9]
+2024-11-20T07:46:17.458+02:00  INFO 87778 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-20T07:46:17.464+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-11-20T07:46:17.467+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Started SecurityApplication in 0.736 seconds (process running for 327.572)
+2024-11-20T07:46:17.581+02:00  INFO 87778 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-20T07:48:48.313+02:00  INFO 87778 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-20T07:48:48.331+02:00  INFO 87778 --- [       Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:48:48.340+02:00  WARN 87778 --- [       Thread-7] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+2024-11-20T07:48:48.351+02:00  INFO 87778 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:48:48.391+02:00  INFO 87778 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-11-20T07:48:48.393+02:00  INFO 87778 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:48:48.485+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:48:48.485+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:48:48.572+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:48:48.578+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:48:48.649+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:48:48.649+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:48:48.649+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:48:48.655+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:48:48.655+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 169 ms
+2024-11-20T07:48:48.691+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:48:48.693+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:48:48.693+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:48:48.693+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-11-20T07:48:48.717+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@1c295908
+2024-11-20T07:48:48.717+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-11-20T07:48:48.735+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:48:48.762+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:48:48.765+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.765+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:48:48.766+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.766+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:48:48.767+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.767+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:48:48.768+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.768+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:48:48.768+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.768+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:48:48.769+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.769+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:48:48.770+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:48:48.770+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:48:48.791+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:48:48.872+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:48:48.872+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:48:48.888+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-11-20T07:48:48.908+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-11-20T07:48:48.909+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:48:48.913+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:48:48.927+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:49:21.643+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:49:21.643+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:49:21.738+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:49:21.743+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:49:21.811+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:49:21.812+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:49:21.812+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:49:21.817+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:49:21.817+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2024-11-20T07:49:21.846+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:49:21.848+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:49:21.848+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:49:21.849+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-11-20T07:49:21.870+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@46c9258b
+2024-11-20T07:49:21.870+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-11-20T07:49:21.885+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:49:21.910+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:49:21.911+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.911+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:49:21.912+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.912+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:49:21.913+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.913+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:49:21.913+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.913+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:49:21.914+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.914+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:49:21.914+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.914+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:49:21.915+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:49:21.915+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:49:21.936+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:49:22.020+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:49:22.020+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:49:22.032+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-11-20T07:49:22.056+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-11-20T07:49:22.056+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:49:22.063+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:49:22.069+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:50:11.016+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:50:11.017+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:50:11.106+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:50:11.111+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:50:11.181+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:50:11.181+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:50:11.181+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:50:11.186+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:50:11.186+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 169 ms
+2024-11-20T07:50:11.215+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:50:11.217+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:50:11.217+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:50:11.217+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-11-20T07:50:11.258+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@1e02cac
+2024-11-20T07:50:11.259+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-11-20T07:50:11.274+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:50:11.299+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:50:11.301+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.301+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:50:11.301+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.301+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:50:11.302+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.302+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:50:11.303+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.304+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:50:11.305+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.305+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:50:11.305+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.305+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:50:11.306+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:50:11.306+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:50:11.338+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:50:11.423+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:50:11.423+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:50:11.437+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-11-20T07:50:11.447+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-11-20T07:50:11.450+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:50:11.455+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:50:11.460+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:51:26.592+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:51:26.593+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:51:26.701+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:51:26.706+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:51:26.775+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:51:26.776+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:51:26.776+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:51:26.783+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:51:26.783+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2024-11-20T07:51:26.814+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:51:26.817+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:51:26.817+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:51:26.817+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-11-20T07:51:26.848+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@481a671d
+2024-11-20T07:51:26.848+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-11-20T07:51:26.866+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:51:26.893+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:51:26.900+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.900+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:51:26.901+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.901+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:51:26.901+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.901+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:51:26.902+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.902+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:51:26.902+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.902+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:51:26.903+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.903+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:51:26.903+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:51:26.903+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:51:26.931+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:51:27.017+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:51:27.017+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:51:27.029+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-11-20T07:51:27.034+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-11-20T07:51:27.034+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:51:27.038+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:51:27.043+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:52:20.009+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:52:20.009+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:52:20.115+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:52:20.121+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:52:20.342+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:52:20.342+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:52:20.342+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:52:20.351+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:52:20.351+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 340 ms
+2024-11-20T07:52:20.398+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:52:20.400+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:52:20.401+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:52:20.401+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-11-20T07:52:20.431+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@754fff02
+2024-11-20T07:52:20.431+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-11-20T07:52:20.454+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:52:20.480+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:52:20.481+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.481+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:52:20.482+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.482+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:52:20.482+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.482+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:52:20.483+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.483+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:52:20.483+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.483+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:52:20.484+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.484+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:52:20.484+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:20.484+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:52:20.512+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:52:20.604+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:52:20.604+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:52:20.618+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-11-20T07:52:20.628+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-11-20T07:52:20.628+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:52:20.632+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:52:20.637+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:52:47.753+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:52:47.753+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:52:47.853+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:52:47.858+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:52:47.963+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:52:47.963+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:52:47.963+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:52:47.968+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:52:47.969+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 214 ms
+2024-11-20T07:52:47.998+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:52:48.000+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:52:48.000+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:52:48.000+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-11-20T07:52:48.037+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@9e7795e
+2024-11-20T07:52:48.038+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-11-20T07:52:48.054+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:52:48.076+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:52:48.077+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.077+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:52:48.078+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.078+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:52:48.079+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.079+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:52:48.080+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.080+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:52:48.081+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.081+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:52:48.081+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.081+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:52:48.082+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:52:48.082+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:52:48.107+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:52:48.207+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:52:48.207+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:52:48.226+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-11-20T07:52:48.249+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-11-20T07:52:48.250+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:52:48.253+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:52:48.258+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:53:32.136+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:53:32.137+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:53:32.277+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:53:32.285+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:53:32.353+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:53:32.353+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:53:32.353+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:53:32.357+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:53:32.357+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 219 ms
+2024-11-20T07:53:32.398+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:53:32.400+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:53:32.400+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:53:32.400+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-11-20T07:53:32.448+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.postgresql.jdbc.PgConnection@5c6c0f09
+2024-11-20T07:53:32.448+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-11-20T07:53:32.464+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:53:32.486+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:53:32.488+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.488+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:53:32.488+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.488+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:53:32.489+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.489+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:53:32.489+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.489+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:53:32.490+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.490+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:53:32.490+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.490+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:53:32.491+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:53:32.491+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:53:32.513+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:53:32.595+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:53:32.595+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:53:32.608+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-11-20T07:53:32.615+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-11-20T07:53:32.615+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:53:32.619+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:53:32.625+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:54:07.367+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:54:07.368+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:54:07.460+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:54:07.468+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:54:07.584+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:54:07.629+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:54:07.629+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:54:07.635+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-7].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:54:07.635+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 265 ms
+2024-11-20T07:54:07.677+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:54:07.680+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:54:07.680+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:54:07.681+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-11-20T07:54:07.712+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection org.postgresql.jdbc.PgConnection@1e3ee3c9
+2024-11-20T07:54:07.712+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-11-20T07:54:07.730+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:54:07.757+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:54:07.759+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.759+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:54:07.760+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.760+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:54:07.761+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.761+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:54:07.762+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.762+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:54:07.763+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.763+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:54:07.764+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.764+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:54:07.765+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:07.765+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:54:07.794+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:54:07.906+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:54:07.906+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:54:07.916+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-11-20T07:54:07.938+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-11-20T07:54:07.938+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:54:07.942+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:54:07.948+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:54:33.651+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:54:33.652+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:54:33.776+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:54:33.784+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:54:33.856+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:54:33.856+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:54:33.856+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:54:33.861+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-8].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:54:33.861+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 208 ms
+2024-11-20T07:54:33.892+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:54:33.894+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:54:33.894+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:54:33.895+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-11-20T07:54:33.935+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection org.postgresql.jdbc.PgConnection@1b43cc2b
+2024-11-20T07:54:33.935+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-11-20T07:54:33.963+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:54:33.994+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:54:33.995+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.995+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:54:33.996+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.996+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:54:33.996+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.996+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:54:33.997+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.997+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:54:33.997+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.997+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:54:33.998+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.998+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:54:33.998+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:54:33.998+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:54:34.021+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:54:34.110+02:00  WARN 87778 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController' defined in file [/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes/com/redjanvier/signature/controllers/AuthenticationController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-20T07:54:34.110+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:54:34.123+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-11-20T07:54:34.124+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-11-20T07:54:34.124+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-20T07:54:34.127+02:00  INFO 87778 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-20T07:54:34.135+02:00 ERROR 87778 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.redjanvier.signature.controllers.AuthenticationController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-11-20T07:55:48.315+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Starting SecurityApplication using Java 17.0.11 with PID 87778 (/Users/redjanvier/Desktop/workspace/personal/ist-signature-be/target/classes started by redjanvier in /Users/redjanvier/Desktop/workspace/personal/ist-signature-be)
+2024-11-20T07:55:48.316+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-20T07:55:48.416+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-20T07:55:48.421+02:00  INFO 87778 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2024-11-20T07:55:48.498+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-11-20T07:55:48.498+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-20T07:55:48.498+02:00  INFO 87778 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-11-20T07:55:48.503+02:00  INFO 87778 --- [  restartedMain] o.a.c.c.C.[Tomcat-9].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-11-20T07:55:48.503+02:00  INFO 87778 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 185 ms
+2024-11-20T07:55:48.533+02:00  INFO 87778 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-20T07:55:48.536+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:55:48.536+02:00  INFO 87778 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-20T07:55:48.536+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2024-11-20T07:55:48.564+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection org.postgresql.jdbc.PgConnection@5ae0ee25
+2024-11-20T07:55:48.565+02:00  INFO 87778 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2024-11-20T07:55:48.589+02:00  INFO 87778 --- [  restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-11-20T07:55:48.614+02:00  INFO 87778 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-20T07:55:48.617+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.618+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "token" does not exist, skipping
+2024-11-20T07:55:48.618+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.618+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_company" does not exist, skipping
+2024-11-20T07:55:48.619+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.619+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "_user" does not exist, skipping
+2024-11-20T07:55:48.620+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.620+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "token" does not exist, skipping
+2024-11-20T07:55:48.621+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.621+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_company_seq" does not exist, skipping
+2024-11-20T07:55:48.621+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.621+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "_user_seq" does not exist, skipping
+2024-11-20T07:55:48.622+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-20T07:55:48.622+02:00  WARN 87778 --- [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "token_seq" does not exist, skipping
+2024-11-20T07:55:48.645+02:00  INFO 87778 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-20T07:55:48.826+02:00  WARN 87778 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-20T07:55:48.930+02:00  INFO 87778 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@549807e5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21a4099c, org.springframework.security.web.context.SecurityContextHolderFilter@653f601d, org.springframework.security.web.header.HeaderWriterFilter@69522a4f, org.springframework.web.filter.CorsFilter@4f04c4cb, org.springframework.security.web.authentication.logout.LogoutFilter@7d70e188, com.redjanvier.signature.config.JwtAuthenticationFilter@478e8df5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57db8811, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f23c0f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17ba1c03, org.springframework.security.web.session.SessionManagementFilter@68749955, org.springframework.security.web.access.ExceptionTranslationFilter@21826a89, org.springframework.security.web.access.intercept.AuthorizationFilter@2e9ecf1f]
+2024-11-20T07:55:49.006+02:00  INFO 87778 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-20T07:55:49.012+02:00  INFO 87778 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-11-20T07:55:49.015+02:00  INFO 87778 --- [  restartedMain] c.r.signature.SecurityApplication        : Started SecurityApplication in 0.722 seconds (process running for 899.122)
+2024-11-20T07:55:49.124+02:00  INFO 87778 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-20T07:55:59.037+02:00  INFO 87778 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat-9].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-20T07:55:59.038+02:00  INFO 87778 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-20T07:55:59.041+02:00  INFO 87778 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-11-20T07:55:59.078+02:00  WARN 87778 --- [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: User is not found!]
+DEBUG: Jakarta Mail version 2.1.1
+DEBUG: URL jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: /META-INF/javamail.default.providers
+DEBUG: Tables of loaded providers
+DEBUG: Providers Listed By Class Name: {com.sun.mail.smtp.SMTPTransport=jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle], com.sun.mail.pop3.POP3Store=jakarta.mail.Provider[STORE,pop3,com.sun.mail.pop3.POP3Store,Oracle], com.sun.mail.imap.IMAPSSLStore=jakarta.mail.Provider[STORE,imaps,com.sun.mail.imap.IMAPSSLStore,Oracle], com.sun.mail.smtp.SMTPSSLTransport=jakarta.mail.Provider[TRANSPORT,smtps,com.sun.mail.smtp.SMTPSSLTransport,Oracle], com.sun.mail.pop3.POP3SSLStore=jakarta.mail.Provider[STORE,pop3s,com.sun.mail.pop3.POP3SSLStore,Oracle], com.sun.mail.imap.IMAPStore=jakarta.mail.Provider[STORE,imap,com.sun.mail.imap.IMAPStore,Oracle]}
+DEBUG: Providers Listed By Protocol: {imap=jakarta.mail.Provider[STORE,imap,com.sun.mail.imap.IMAPStore,Oracle], smtp=jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle], pop3=jakarta.mail.Provider[STORE,pop3,com.sun.mail.pop3.POP3Store,Oracle], imaps=jakarta.mail.Provider[STORE,imaps,com.sun.mail.imap.IMAPSSLStore,Oracle], smtps=jakarta.mail.Provider[TRANSPORT,smtps,com.sun.mail.smtp.SMTPSSLTransport,Oracle], pop3s=jakarta.mail.Provider[STORE,pop3s,com.sun.mail.pop3.POP3SSLStore,Oracle]}
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: URL jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.address.map
+DEBUG: successfully loaded resource: jar:file:/Users/redjanvier/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.address.map
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "smtp.gmail.com", port 587, isSSL false
+220 smtp.gmail.com ESMTP a640c23a62f3a-aa20df26d4dsm740511266b.20 - gsmtp
+DEBUG SMTP: connected to host "smtp.gmail.com", port: 587
+EHLO localhost
+250-smtp.gmail.com at your service, [196.12.150.55]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+DEBUG SMTP: Found extension "SIZE", arg "35882577"
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "CHUNKING", arg ""
+DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+STARTTLS
+220 2.0.0 Ready to start TLS
+EHLO localhost
+250-smtp.gmail.com at your service, [196.12.150.55]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+DEBUG SMTP: Found extension "SIZE", arg "35882577"
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "CHUNKING", arg ""
+DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+DEBUG SMTP: protocolConnect login, host=smtp.gmail.com, user=janvierntwali@gmail.com, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<redjanvier@localhost>
+250 2.1.0 OK a640c23a62f3a-aa20df26d4dsm740511266b.20 - gsmtp
+RCPT TO:<janvierntwali@gmail.com>
+250 2.1.5 OK a640c23a62f3a-aa20df26d4dsm740511266b.20 - gsmtp
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   janvierntwali@gmail.com
+DATA
+354 Go ahead a640c23a62f3a-aa20df26d4dsm740511266b.20 - gsmtp
+Date: Wed, 20 Nov 2024 07:56:47 +0200 (CAT)
+To: janvierntwali@gmail.com
+Message-ID: <480832399.5.1732082207425@localhost>
+Subject: IST Signatures - Verify your account
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_3_227793942.1732082202667"
+
+------=_Part_3_227793942.1732082202667
+Content-Type: multipart/related; 
+	boundary="----=_Part_4_1844973422.1732082202667"
+
+------=_Part_4_1844973422.1732082202667
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<h2>Hey, Janvier</h2>
+<p>Congratulations for your successfull registration to IST Signatures Platform.</p>
+<p>As a step of your registration you need to verify your account now!</p>
+<a href='http://localhost:8080/api/v1/auth/verify?key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW52aWVybnR3YWxpQGdtYWlsLmNvbSIsImlhdCI6MTczMjA4MjIwMiwiZXhwIjoxNzMyMTY4NjAyfQ.RGgeX_08ATUYzgF4yhtngUKgiM0mmNq0b6Tq9AxmXlQ' target='__blank'>Click this link to verify</a>
+
+------=_Part_4_1844973422.1732082202667--
+
+------=_Part_3_227793942.1732082202667--
+.
+250 2.0.0 OK  1732082208 a640c23a62f3a-aa20df26d4dsm740511266b.20 - gsmtp
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 closing connection a640c23a62f3a-aa20df26d4dsm740511266b.20 - gsmtp
+2024-11-20T08:02:53.761+02:00  WARN 87778 --- [-12 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Thread starvation or clock leap detected (housekeeper delta=2m35s18ms).
+2024-11-20T08:41:18.499+02:00  WARN 87778 --- [io-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Email is already in use!]
+2024-11-20T08:42:33.533+02:00  WARN 87778 --- [nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Email is already in use!]
+2024-11-20T08:43:51.560+02:00  WARN 87778 --- [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Email is already in use!]
+2024-11-20T08:44:44.398+02:00  WARN 87778 --- [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Email is already in use!]
